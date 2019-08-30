@@ -122,6 +122,10 @@ function tree (treeNodes = []) {
         }
     });
     return pointerOfRoot;
+}
+
+
+console.log( tree(treeNodes) ) ;
 
 
 
