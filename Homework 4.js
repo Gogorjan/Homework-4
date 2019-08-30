@@ -114,7 +114,8 @@ function tree (treeNodes = []) {
     treeNodes.forEach(item => global[item.id] = {});
     treeNodes.forEach(item => {
         if(item.parent === null) {
-            pointerOfRoot = global[item.id];
+            pointerOfRoot = {} ;
+            pointerOfRoot[item.id] = global[item.id];
         } else {
             global[item.parent][item.id] = global[item.id];
         }
