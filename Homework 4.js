@@ -91,6 +91,44 @@ console.log( divide( '495215' , 3 ) ) ;
 
 
 
+
+//       5
+
+
+
+
+
+let treeNodes = [
+    { parent: null , id: 0 },
+    { parent: 0 , id: 1 },
+    { parent: 0 , id: 2 },
+    { parent: 1 , id: 3 },
+    { parent: 1 , id: 4 },
+    { parent: 2 , id: 5 },
+    { parent: 4 , id: 6 },
+] ;
+
+function tree (treeNodes = []) {
+    debugger ;
+    const global = {}
+    let pointerOfRoot = null;
+    treeNodes.forEach(item => global[item.id] = {});
+    treeNodes.forEach(item => {
+        debugger ;
+        if(item.parent === null) {
+            pointerOfRoot = global[item.id];
+        } else {
+            global[item.parent][item.id] = global[item.id];
+        }
+    });
+    return pointerOfRoot;
+
+
+
+
+            
+            
+
 //        6
 
 
