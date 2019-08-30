@@ -109,12 +109,10 @@ let treeNodes = [
 ] ;
 
 function tree (treeNodes = []) {
-    debugger ;
     const global = {}
     let pointerOfRoot = null;
     treeNodes.forEach(item => global[item.id] = {});
     treeNodes.forEach(item => {
-        debugger ;
         if(item.parent === null) {
             pointerOfRoot = global[item.id];
         } else {
